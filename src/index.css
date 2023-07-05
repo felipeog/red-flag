@@ -1,0 +1,23 @@
+:root {
+  --letter-color: #ff1a48;
+  --background-color: #000;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: flex;
+  min-height: 100dvh;
+}
+
+.container {
+  margin: auto;
+  width: 800px;
+  max-width: 100%;
+}
