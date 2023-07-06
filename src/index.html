@@ -18,12 +18,30 @@
             <!-- create wave-filter -->
             <!-- create letters -->
             <!-- animate letters -->
+
+            <path
+              id="box"
+              d="M20,20
+                 L850,20
+                 L850,850
+                 L20,850
+                 Z"
+            ></path>
           </defs>
 
           <rect width="870" height="870" fill="var(--background-color)" />
 
           <g filter="url(#wave-filter)">
             <!-- arrange letters -->
+            <use
+              href="#box"
+              x="0"
+              y="0"
+              stroke="#FF1A48"
+              stroke-width="40"
+              stroke-linecap="square"
+              fill="none"
+            />
           </g>
         </svg>
       </div>
