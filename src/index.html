@@ -15,7 +15,30 @@
       <div class="container">
         <svg viewBox="0 0 2000 1500">
           <defs>
-            <!-- create wave-filter -->
+            <filter id="wave-filter">
+              <feImage
+                xlink:href="map.jpg"
+                preserveAspectRatio="none"
+                width="4000"
+                height="1500"
+                x="0"
+                y="0"
+              >
+                <animate
+                  attributeName="x"
+                  values="-800;0"
+                  dur="10s"
+                  repeatCount="indefinite"
+                />
+              </feImage>
+
+              <feDisplacementMap
+                in="SourceGraphic"
+                scale="80"
+                xChannelSelector="R"
+                yChannelSelector="B"
+              ></feDisplacementMap>
+            </filter>
 
             <path
               id="letter-r"
