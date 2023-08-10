@@ -4,8 +4,8 @@ Reproducing [Red Flag](https://dribbble.com/shots/19724386-Red-Flag) by [Franzis
 
 # Preview
 
-[to-do]
+- https://felipeog-red-flag.netlify.app
 
 ## Resources
 
-[to-do]
+- [Figma file](https://www.figma.com/file/Sg42fEnSipcpZ8jwbBSLm9/Red-Flag)
