@@ -17,25 +17,25 @@
           <defs>
             <filter id="wave-filter">
               <feImage
-                xlink:href="./map.jpg"
+                xlink:href="./map-raster.jpg"
                 preserveAspectRatio="none"
-                width="4000"
-                height="1500"
+                width="200%"
+                height="100%"
                 x="0"
                 y="0"
               >
                 <animate
                   attributeName="x"
-                  values="-800;0"
-                  dur="10s"
+                  values="-100%;0"
+                  dur="5s"
                   repeatCount="indefinite"
                 />
               </feImage>
 
               <feDisplacementMap
                 in="SourceGraphic"
-                scale="80"
-                xChannelSelector="R"
+                scale="30"
+                xChannelSelector="B"
                 yChannelSelector="B"
               ></feDisplacementMap>
             </filter>
