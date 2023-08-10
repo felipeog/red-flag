@@ -1,11 +1,9 @@
 {
   "name": "red-flag",
   "scripts": {
-    "dev": "vite --host --port 3000",
-    "build": "vite build",
-    "preview": "vite preview"
+    "start": "live-server"
   },
-  "devDependencies": {
-    "vite": "^3.1.7"
+  "dependencies": {
+    "live-server": "^1.2.2"
   }
 }
