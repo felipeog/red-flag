@@ -18,6 +18,7 @@
             <filter id="wave-filter">
               <feImage
                 xlink:href="./map-raster.jpg"
+                result="image"
                 preserveAspectRatio="none"
                 width="200%"
                 height="100%"
@@ -34,10 +35,11 @@
 
               <feDisplacementMap
                 in="SourceGraphic"
+                in2="image"
                 scale="30"
                 xChannelSelector="R"
                 yChannelSelector="B"
-              ></feDisplacementMap>
+              />
             </filter>
 
             <path
@@ -286,28 +288,30 @@
             </path>
 
             <g id="red-flag">
-              <use href="#letter-r"></use>
-              <use href="#letter-e"></use>
-              <use href="#letter-d"></use>
-              <use href="#letter-f"></use>
-              <use href="#letter-l"></use>
-              <use href="#letter-a"></use>
-              <use href="#letter-g"></use>
-            </g>
-
-            <g id="row">
-              <use href="#red-flag" x="565" y="0"></use>
-              <use href="#red-flag" x="-325" y="0"></use>
-              <use href="#red-flag" x="1455" y="0"></use>
+              <use href="#letter-r" x="0" y="0"></use>
+              <use href="#letter-e" x="0" y="0"></use>
+              <use href="#letter-d" x="0" y="0"></use>
+              <use href="#letter-f" x="0" y="0"></use>
+              <use href="#letter-l" x="0" y="0"></use>
+              <use href="#letter-a" x="0" y="0"></use>
+              <use href="#letter-g" x="0" y="0"></use>
             </g>
           </defs>
 
           <rect width="2000" height="1500" fill="var(--background-color)" />
 
           <g filter="url(#wave-filter)">
-            <use href="#row" x="0" y="-575"></use>
-            <use href="#row" x="0" y="315"></use>
-            <use href="#row" x="0" y="1205"></use>
+            <use href="#red-flag" x="-325" y="-575"></use>
+            <use href="#red-flag" x="565" y="-575"></use>
+            <use href="#red-flag" x="1455" y="-575"></use>
+
+            <use href="#red-flag" x="-325" y="315"></use>
+            <use href="#red-flag" x="565" y="315"></use>
+            <use href="#red-flag" x="1455" y="315"></use>
+
+            <use href="#red-flag" x="-325" y="1205"></use>
+            <use href="#red-flag" x="565" y="1205"></use>
+            <use href="#red-flag" x="1455" y="1205"></use>
           </g>
         </svg>
       </div>
