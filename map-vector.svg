@@ -1,33 +1,96 @@
-<svg viewBox="0 0 1600 600" xmlns="http://www.w3.org/2000/svg" width="1600" height="600">
+<svg
+  viewBox="0 0 600 600"
+  xmlns="http://www.w3.org/2000/svg"
+  width="600"
+  height="600"
+>
   <defs>
-    <linearGradient id="linear-gradient" x1="-0.5" y1="0" x2="1.5" y2="1">
-      <stop offset="0.00" stop-color="red" />
-      <stop offset="0.05" stop-color="blue" />
-      <stop offset="0.10" stop-color="red" />
-      <stop offset="0.15" stop-color="blue" />
-      <stop offset="0.20" stop-color="red" />
+    <linearGradient id="red-gradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="red" />
+      <stop offset="0.0625" stop-color="black" />
+      <stop offset="0.125" stop-color="red" />
+      <stop offset="0.1875" stop-color="black" />
+      <stop offset="0.25" stop-color="red" />
+      <stop offset="0.3125" stop-color="black" />
+      <stop offset="0.375" stop-color="red" />
+      <stop offset="0.4375" stop-color="black" />
+      <stop offset="0.5" stop-color="red" />
+      <stop offset="0.5625" stop-color="black" />
+      <stop offset="0.625" stop-color="red" />
+      <stop offset="0.6875" stop-color="black" />
+      <stop offset="0.75" stop-color="red" />
+      <stop offset="0.8125" stop-color="black" />
+      <stop offset="0.875" stop-color="red" />
+      <stop offset="0.9375" stop-color="black" />
+      <stop offset="1" stop-color="red" />
+    </linearGradient>
+    <linearGradient id="blue-gradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="blue" />
+      <stop offset="0.0625" stop-color="black" />
+      <stop offset="0.125" stop-color="blue" />
+      <stop offset="0.1875" stop-color="black" />
       <stop offset="0.25" stop-color="blue" />
-      <stop offset="0.30" stop-color="red" />
-      <stop offset="0.35" stop-color="blue" />
-      <stop offset="0.40" stop-color="red" />
-      <stop offset="0.45" stop-color="blue" />
-      <stop offset="0.50" stop-color="red" />
-      <stop offset="0.55" stop-color="blue" />
-      <stop offset="0.60" stop-color="red" />
-      <stop offset="0.65" stop-color="blue" />
-      <stop offset="0.70" stop-color="red" />
+      <stop offset="0.3125" stop-color="black" />
+      <stop offset="0.375" stop-color="blue" />
+      <stop offset="0.4375" stop-color="black" />
+      <stop offset="0.5" stop-color="blue" />
+      <stop offset="0.5625" stop-color="black" />
+      <stop offset="0.625" stop-color="blue" />
+      <stop offset="0.6875" stop-color="black" />
       <stop offset="0.75" stop-color="blue" />
-      <stop offset="0.80" stop-color="red" />
-      <stop offset="0.85" stop-color="blue" />
-      <stop offset="0.90" stop-color="red" />
-      <stop offset="0.95" stop-color="blue" />
-      <stop offset="1.00" stop-color="red" />
+      <stop offset="0.8125" stop-color="black" />
+      <stop offset="0.875" stop-color="blue" />
+      <stop offset="0.9375" stop-color="black" />
+      <stop offset="1" stop-color="blue" />
     </linearGradient>
 
-    <filter id="gaussian-blur">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="20" />
+    <rect
+      id="red-rect"
+      x="0"
+      y="0"
+      width="600"
+      height="600"
+      fill="url(#red-gradient)"
+    />
+    <rect
+      id="blue-rect"
+      x="0"
+      y="0"
+      width="600"
+      height="600"
+      fill="url(#blue-gradient)"
+    />
+
+    <filter id="filter">
+      <feImage
+        href="#red-rect"
+        result="red"
+        x="0"
+        y="0"
+        width="600"
+        height="600"
+      />
+      <feImage
+        href="#blue-rect"
+        result="blue"
+        x="0"
+        y="0"
+        width="600"
+        height="600"
+      />
+
+      <feBlend in="red" in2="blue" mode="screen" result="blend" />
+
+      <feComposite
+        in="blend"
+        in2="SourceGraphic"
+        operator="in"
+        result="composite"
+      />
+
+      <feGaussianBlur in="composite" stdDeviation="10" />
     </filter>
   </defs>
 
-  <rect width="1600" height="600" fill="url(#linear-gradient)" filter="url(#gaussian-blur)" />
+  <rect width="600" height="600" filter="url(#filter)" />
 </svg>
