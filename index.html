@@ -13,306 +13,50 @@
   <body>
     <div class="wrapper">
       <div class="container">
-        <svg viewBox="0 0 2000 1500">
+        <svg viewBox="0 0 800 600">
           <defs>
             <filter id="wave-filter">
               <feImage
                 xlink:href="./map-raster.jpg"
-                result="image"
+                result="map-raster"
                 preserveAspectRatio="none"
-                width="200%"
-                height="100%"
+                width="1600"
+                height="1600"
                 x="0"
                 y="0"
               >
                 <animate
                   attributeName="x"
-                  values="-100%;0"
-                  dur="5s"
+                  values="-800;0"
+                  dur="10s"
+                  repeatCount="indefinite"
+                />
+                <animate
+                  attributeName="y"
+                  values="-800;0"
+                  dur="10s"
                   repeatCount="indefinite"
                 />
               </feImage>
 
               <feDisplacementMap
                 in="SourceGraphic"
-                in2="image"
-                scale="30"
-                xChannelSelector="R"
-                yChannelSelector="B"
+                in2="map-raster"
+                scale="10"
+                xChannelSelector="B"
+                yChannelSelector="R"
               />
             </filter>
-
-            <path
-              id="letter-r"
-              d=""
-              fill="none"
-              stroke-width="50"
-              stroke="var(--letter-color)"
-            >
-              <animate
-                attributeName="d"
-                dur="3.6s"
-                repeatCount="indefinite"
-                calcMode="spline"
-                keySplines="0.25, 1, 0.25, 1;
-                            0.25, 1, 0.25, 1;
-                            0.25, 1, 0.25, 1;
-                            0.25, 1, 0.25, 1;
-                            0.25, 1, 0.25, 1;
-                            0.25, 1, 0.25, 1"
-                keyTimes="0;
-                          0.1667;
-                          0.3333;
-                          0.5;
-                          0.6667;
-                          0.8333;
-                          1"
-                values="M25,430 V25 H330 C380,25 405,50 405,100 V110 C405,160 380,185 330,185 M330,185 C380,185 405,210 405,260 V430 M330,185 H25;
-                        M25,650 V25 H110 C160,25 185,50 185,100 V110 C185,160 160,185 110,185 M110,185 C160,185 185,210 185,260 V650 M110,185 H25;
-                        M25,210 V25 H110 C160,25 185,50 185,80  V90  C185,120 160,145 110,145 M110,145 C160,145 185,160 185,200 V210 M110,145 H25;
-                        M25,210 V25 H110 C160,25 185,50 185,80  V90  C185,120 160,145 110,145 M110,145 C160,145 185,160 185,200 V210 M110,145 H25;
-                        M25,210 V25 H110 C160,25 185,50 185,80  V90  C185,120 160,145 110,145 M110,145 C160,145 185,160 185,200 V210 M110,145 H25;
-                        M25,650 V25 H110 C160,25 185,50 185,100 V110 C185,160 160,185 110,185 M110,185 C160,185 185,210 185,260 V650 M110,185 H25;
-                        M25,430 V25 H330 C380,25 405,50 405,100 V110 C405,160 380,185 330,185 M330,185 C380,185 405,210 405,260 V430 M330,185 H25"
-              />
-            </path>
-
-            <path
-              id="letter-e"
-              d=""
-              fill="none"
-              stroke-width="50"
-              stroke="var(--letter-color)"
-            >
-              <animate
-                attributeName="d"
-                dur="3.6s"
-                repeatCount="indefinite"
-                calcMode="spline"
-                keySplines="0.25, 1, 0.25, 1;
-                            0.25, 1, 0.25, 1;
-                            0.25, 1, 0.25, 1;
-                            0.25, 1, 0.25, 1;
-                            0.25, 1, 0.25, 1;
-                            0.25, 1, 0.25, 1"
-                keyTimes="0;
-                          0.1667;
-                          0.3333;
-                          0.5;
-                          0.6667;
-                          0.8333;
-                          1"
-                values="M650,25 L465,25 L465,405 L650,405 M640,185 L465,185;
-                        M430,25 L245,25 L245,625 L430,625 M420,185 L245,185;
-                        M430,25 L245,25 L245,185 L430,185 M420,95  L245,95;
-                        M430,25 L245,25 L245,185 L430,185 M420,95  L245,95;
-                        M650,25 L245,25 L245,185 L650,185 M640,95  L245,95;
-                        M430,25 L245,25 L245,625 L430,625 M420,185 L245,185;
-                        M650,25 L465,25 L465,405 L650,405 M640,185 L465,185"
-              />
-            </path>
-
-            <path
-              id="letter-d"
-              d=""
-              fill="none"
-              stroke-width="50"
-              stroke="var(--letter-color)"
-            >
-              <animate
-                attributeName="d"
-                dur="3.6s"
-                repeatCount="indefinite"
-                calcMode="spline"
-                keySplines="0.25, 1, 0.25, 1;
-                            0.25, 1, 0.25, 1;
-                            0.25, 1, 0.25, 1;
-                            0.25, 1, 0.25, 1;
-                            0.25, 1, 0.25, 1;
-                            0.25, 1, 0.25, 1"
-                keyTimes="0;
-                          0.1667;
-                          0.3333;
-                          0.5;
-                          0.6667;
-                          0.8333;
-                          1"
-                values="M845,100 C845,50 820,25 770,25 H685 V405 H770 C820,405 845,380 845,330 V100Z;
-                        M845,100 C845,50 820,25 770,25 H465 V185 H770 C820,185 845,160 845,110 V100Z;
-                        M845,100 C845,50 820,25 770,25 H465 V625 H770 C820,625 845,600 845,550 V100Z;
-                        M845,100 C845,50 820,25 770,25 H465 V185 H770 C820,185 845,160 845,110 V100Z;
-                        M845,100 C845,50 820,25 770,25 H685 V185 H770 C820,185 845,160 845,110 V100Z;
-                        M845,100 C845,50 820,25 770,25 H465 V625 H770 C820,625 845,600 845,550 V100Z;
-                        M845,100 C845,50 820,25 770,25 H685 V405 H770 C820,405 845,380 845,330 V100Z"
-              />
-            </path>
-
-            <path
-              id="letter-f"
-              d=""
-              fill="none"
-              stroke-width="50"
-              stroke="var(--letter-color)"
-            >
-              <animate
-                attributeName="d"
-                dur="3.6s"
-                repeatCount="indefinite"
-                calcMode="spline"
-                keySplines="0.25, 1, 0.25, 1;
-                            0.25, 1, 0.25, 1;
-                            0.25, 1, 0.25, 1;
-                            0.25, 1, 0.25, 1;
-                            0.25, 1, 0.25, 1;
-                            0.25, 1, 0.25, 1"
-                keyTimes="0;
-                          0.1667;
-                          0.3333;
-                          0.5;
-                          0.6667;
-                          0.8333;
-                          1"
-                values="M25,870 V465 L210,465 M200,625 L25,625;
-                        M25,870 V685 L210,685 M200,795 L25,795;
-                        M25,870 V245 L210,245 M200,575 L25,575;
-                        M25,870 V245 L100,245 M90,575  L25,575;
-                        M25,870 V245 L100,245 M90,575  L25,575;
-                        M25,870 V685 L210,685 M200,795 L25,795;
-                        M25,870 V465 L210,465 M200,625 L25,625"
-              />
-            </path>
-
-            <path
-              id="letter-l"
-              d=""
-              fill="none"
-              stroke-width="50"
-              stroke="var(--letter-color)"
-            >
-              <animate
-                attributeName="d"
-                dur="3.6s"
-                repeatCount="indefinite"
-                calcMode="spline"
-                keySplines="0.25, 1, 0.25, 1;
-                            0.25, 1, 0.25, 1;
-                            0.25, 1, 0.25, 1;
-                            0.25, 1, 0.25, 1;
-                            0.25, 1, 0.25, 1;
-                            0.25, 1, 0.25, 1"
-                keyTimes="0;
-                          0.1667;
-                          0.3333;
-                          0.5;
-                          0.6667;
-                          0.8333;
-                          1"
-                values="M245,440 L245,845 L430,845;
-                        M245,660 L245,845 L430,845;
-                        M245,220 L245,845 L430,845;
-                        M135,220 L135,845 L210,845;
-                        M135,220 L135,845 L210,845;
-                        M245,660 L245,845 L320,845;
-                        M245,440 L245,845 L430,845"
-              />
-            </path>
-
-            <path
-              id="letter-a"
-              d=""
-              fill="none"
-              stroke-width="50"
-              stroke="var(--letter-color)"
-            >
-              <animate
-                attributeName="d"
-                dur="3.6s"
-                repeatCount="indefinite"
-                calcMode="spline"
-                keySplines="0.25, 1, 0.25, 1;
-                            0.25, 1, 0.25, 1;
-                            0.25, 1, 0.25, 1;
-                            0.25, 1, 0.25, 1;
-                            0.25, 1, 0.25, 1;
-                            0.25, 1, 0.25, 1"
-                keyTimes="0;
-                          0.1667;
-                          0.3333;
-                          0.5;
-                          0.6667;
-                          0.8333;
-                          1"
-                values="M465,870 V540 C465,490 490,465 540,465 H550 C600,465 625,490 625,540 V870 M625,625 L465,625;
-                        M465,870 V320 C465,270 490,245 540,245 H550 C600,245 625,270 625,320 V870 M625,625 L465,625;
-                        M465,870 V760 C465,710 490,685 540,685 H550 C600,685 625,710 625,760 V870 M625,795 L465,795;
-                        M245,870 V320 C245,270 270,245 320,245 H550 C600,245 625,270 625,320 V870 M625,625 L245,625;
-                        M245,870 V320 C245,270 270,245 320,245 H330 C380,245 405,270 405,320 V870 M405,625 L245,625;
-                        M355,870 V760 C355,710 380,685 430,685 H550 C600,685 625,710 625,760 V870 M625,795 L355,795;
-                        M465,870 V540 C465,490 490,465 540,465 H550 C600,465 625,490 625,540 V870 M625,625 L465,625"
-              />
-            </path>
-
-            <path
-              id="letter-g"
-              d=""
-              fill="none"
-              stroke-width="50"
-              stroke="var(--letter-color)"
-            >
-              <animate
-                attributeName="d"
-                dur="3.6s"
-                repeatCount="indefinite"
-                calcMode="spline"
-                keySplines="0.25, 1, 0.25, 1;
-                            0.25, 1, 0.25, 1;
-                            0.25, 1, 0.25, 1;
-                            0.25, 1, 0.25, 1;
-                            0.25, 1, 0.25, 1;
-                            0.25, 1, 0.25, 1"
-                keyTimes="0;
-                          0.1667;
-                          0.3333;
-                          0.5;
-                          0.6667;
-                          0.8333;
-                          1"
-                values="M845,540 C845,490 820,465 770,465 H760 C710,465 685,490 685,540 V770 C685,820 710,845 760,845 H770 C820,845 845,820 845,770 V625 H770;
-                        M845,320 C845,270 820,245 770,245 H760 C710,245 685,270 685,320 V770 C685,820 710,845 760,845 H770 C820,845 845,820 845,770 V625 H770;
-                        M845,760 C845,710 820,685 770,685 H760 C710,685 685,710 685,760 V770 C685,820 710,845 760,845 H770 C820,845 845,825 845,805 V795 H770;
-                        M845,320 C845,270 820,245 770,245 H760 C710,245 685,270 685,320 V770 C685,820 710,845 760,845 H770 C820,845 845,820 845,770 V625 H770;
-                        M845,320 C845,270 820,245 770,245 H540 C490,245 465,270 465,320 V770 C465,820 490,845 540,845 H770 C820,845 845,820 845,770 V625 H770;
-                        M845,760 C845,710 820,685 770,685 H760 C710,685 685,710 685,760 V770 C685,820 710,845 760,845 H770 C820,845 845,825 845,805 V795 H770;
-                        M845,540 C845,490 820,465 770,465 H760 C710,465 685,490 685,540 V770 C685,820 710,845 760,845 H770 C820,845 845,820 845,770 V625 H770"
-              />
-            </path>
-
-            <g id="red-flag">
-              <use href="#letter-r" x="0" y="0"></use>
-              <use href="#letter-e" x="0" y="0"></use>
-              <use href="#letter-d" x="0" y="0"></use>
-              <use href="#letter-f" x="0" y="0"></use>
-              <use href="#letter-l" x="0" y="0"></use>
-              <use href="#letter-a" x="0" y="0"></use>
-              <use href="#letter-g" x="0" y="0"></use>
-            </g>
           </defs>
 
-          <rect width="2000" height="1500" fill="var(--background-color)" />
-
-          <g filter="url(#wave-filter)">
-            <use href="#red-flag" x="-325" y="-575"></use>
-            <use href="#red-flag" x="565" y="-575"></use>
-            <use href="#red-flag" x="1455" y="-575"></use>
-
-            <use href="#red-flag" x="-325" y="315"></use>
-            <use href="#red-flag" x="565" y="315"></use>
-            <use href="#red-flag" x="1455" y="315"></use>
-
-            <use href="#red-flag" x="-325" y="1205"></use>
-            <use href="#red-flag" x="565" y="1205"></use>
-            <use href="#red-flag" x="1455" y="1205"></use>
-          </g>
+          <image
+            filter="url(#wave-filter)"
+            x="-50"
+            y="-150"
+            href="./red-flag.svg"
+            width="900"
+            height="900"
+          />
         </svg>
       </div>
     </div>
