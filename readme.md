@@ -2,7 +2,7 @@
 
 Reproducing [Red Flag](https://dribbble.com/shots/19724386-Red-Flag) by [Franziska Volmer](https://dribbble.com/franziskavolmer) with SVG.
 
-# Preview
+## Preview
 
 - https://felipeog-red-flag.netlify.app
 
