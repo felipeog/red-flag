@@ -11,6 +11,12 @@
   padding: 0;
 }
 
+.controls {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
 .wrapper {
   display: flex;
   min-height: 100dvh;
